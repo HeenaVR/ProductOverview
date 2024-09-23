@@ -1,0 +1,518 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "name": "Knitted Jumper",
+      "detail": "Knitted jumper with a crew neck",
+      "category": "Oberteile",
+      "brand": "QS by s.Oliver",
+      "price": 29.99,
+      "tags": { "new": true, "sustainable": true, "premium": false },
+      "colorVariants": [
+        {
+          "shoppingCart": false,
+          "wishList": false,
+          "color": {
+            "variant": "LightGrey",
+            "group": "Grey",
+            "value": "#bdbdbd"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2141220.9730_front",
+            "flat": "https://media.soliver.com/i/soliver/2141220.9730_flat",
+            "back": "https://media.soliver.com/i/soliver/2141220.9730_back",
+            "outfit": "https://media.soliver.com/i/soliver/2141220.9730_outfit"
+          }
+        },
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "LightBrown",
+            "group": "Brown",
+            "value": "#a1887f"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2141220.83W0_front",
+            "flat": "https://media.soliver.com/i/soliver/2141220.83W0_flat",
+            "back": "https://media.soliver.com/i/soliver/2141220.83W0_back",
+            "outfit": "https://media.soliver.com/i/soliver/2141220.83W0_outfit"
+          }
+        },
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "RoyalBlue",
+            "group": "Blue",
+            "value": "#1a237e"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2141220.5884_front",
+            "flat": "https://media.soliver.com/i/soliver/2141220.5884_flat",
+            "back": "https://media.soliver.com/i/soliver/2141220.5884_back",
+            "outfit": "https://media.soliver.com/i/soliver/2141220.5884_outfit"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "T-shirt",
+      "detail": "T-shirt with an all-over print",
+      "category": "Oberteile",
+      "brand": "QS by s.Oliver",
+      "price": 19.99,
+      "tags": { "new": true, "sustainable": false, "premium": false },
+      "colorVariants": [
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "LightGreen",
+            "group": "Green",
+            "value": "#aed581"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2140283.73A0_front",
+            "flat": "https://media.soliver.com/i/soliver/2140283.73A0_flat",
+            "back": "https://media.soliver.com/i/soliver/2140283.73A0_back",
+            "outfit": "https://media.soliver.com/i/soliver/2140283.73A0_outfit"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Cotton T-shirt",
+      "detail": "Cotton T-shirt with a slub yarn texture",
+      "category": "Oberteile",
+      "brand": "QS by s.Oliver",
+      "price": 12.99,
+      "tags": { "new": true, "sustainable": true, "premium": false },
+      "colorVariants": [
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "White",
+            "group": "White",
+            "value": "#ffffff"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2141633.0100_front",
+            "flat": "https://media.soliver.com/i/soliver/2141633.0100_flat",
+            "back": "https://media.soliver.com/i/soliver/2141633.0100_back",
+            "outfit": "https://media.soliver.com/i/soliver/2141633.0100_outfit"
+          }
+        },
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "Black",
+            "group": "Black",
+            "value": "#000000"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2141633.9999_front",
+            "flat": "https://media.soliver.com/i/soliver/2141633.9999_flat",
+            "back": "https://media.soliver.com/i/soliver/2141633.9999_back",
+            "outfit": "https://media.soliver.com/i/soliver/2141633.9999_outfit"
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Dress Shirt",
+      "detail": "Slim fit: cotton blend dress shirt",
+      "category": "Oberteile",
+      "brand": "s.Oliver BLACK LABEL",
+      "price": 49.99,
+      "tags": { "new": true, "sustainable": true, "premium": true },
+      "colorVariants": [
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "White",
+            "group": "White",
+            "value": "#ffffff"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2145478.0100_front",
+            "flat": "https://media.soliver.com/i/soliver/2145478.0100_flat",
+            "back": "https://media.soliver.com/i/soliver/2145478.0100_back",
+            "outfit": "https://media.soliver.com/i/soliver/2145478.0100_outfit"
+          }
+        },
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "RoyalBlue",
+            "group": "Blue",
+            "value": "#1a237e"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2145478.5978_front",
+            "flat": "https://media.soliver.com/i/soliver/2145478.5978_flat",
+            "back": "https://media.soliver.com/i/soliver/2145478.5978_back",
+            "outfit": "https://media.soliver.com/i/soliver/2145478.5978_outfit"
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Cotton Blend Shirt",
+      "detail": "Slim fit: Cotton blend shirt",
+      "category": "Oberteile",
+      "brand": "s.Oliver BLACK LABEL",
+      "price": 59.99,
+      "tags": { "new": true, "sustainable": false, "premium": true },
+      "colorVariants": [
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "Bordeaux",
+            "group": "Brown",
+            "value": "#bcaaa4"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2142866.39G2_front",
+            "flat": "https://media.soliver.com/i/soliver/2142866.39G2_flat",
+            "back": "https://media.soliver.com/i/soliver/2142866.39G2_back",
+            "outfit": "https://media.soliver.com/i/soliver/2142866.39G2_outfit"
+          }
+        },
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "SkyBlue",
+            "group": "Blue",
+            "value": "#b3e5fc"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2142866.53G2_front",
+            "flat": "https://media.soliver.com/i/soliver/2142866.53G2_flat",
+            "back": "https://media.soliver.com/i/soliver/2142866.53G2_back",
+            "outfit": "https://media.soliver.com/i/soliver/2142866.53G2_outfit"
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Long Sleeve Shirt",
+      "detail": "Slim fit: long sleeve shirt with a patch breast pocket",
+      "category": "Oberteile",
+      "brand": "s.Oliver",
+      "price": 39.99,
+      "tags": { "new": true, "sustainable": false, "premium": false },
+      "colorVariants": [
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "LightGreen",
+            "group": "Green",
+            "value": "#689f38"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2140657.7450_front",
+            "flat": "https://media.soliver.com/i/soliver/2140657.7450_flat",
+            "back": "https://media.soliver.com/i/soliver/2140657.7450_back",
+            "outfit": "https://media.soliver.com/i/soliver/2140657.7450_outfit"
+          }
+        },
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "Lightblue",
+            "group": "Blue",
+            "value": "#b3e5fc"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2140657.5084_front",
+            "flat": "https://media.soliver.com/i/soliver/2140657.5084_flat",
+            "back": "https://media.soliver.com/i/soliver/2140657.5084_back",
+            "outfit": "https://media.soliver.com/i/soliver/2140657.5084_outfit"
+          }
+        },
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "DarkGrey",
+            "group": "Grey",
+            "value": "#424242"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2140657.5978_front",
+            "flat": "https://media.soliver.com/i/soliver/2140657.5978_flat",
+            "back": "https://media.soliver.com/i/soliver/2140657.5978_back",
+            "outfit": "https://media.soliver.com/i/soliver/2140657.5978_outfit"
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Shawn Jeans",
+      "detail": "Shawn jeans / regular fit / mid rise / slim leg",
+      "category": "Unterteile",
+      "brand": "QS by s.Oliver",
+      "price": 59.99,
+      "tags": { "new": true, "sustainable": false, "premium": false },
+      "colorVariants": [
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "Blue",
+            "group": "Blue",
+            "value": "#0d47a1"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2141260.55Z6_front",
+            "flat": "https://media.soliver.com/i/soliver/2141260.55Z6_flat",
+            "back": "https://media.soliver.com/i/soliver/2141260.55Z6_back",
+            "outfit": "https://media.soliver.com/i/soliver/2141260.55Z6_outfit"
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Trousers",
+      "detail": "Denim trousers",
+      "category": "Unterteile",
+      "brand": "QS by s.Oliver",
+      "price": 49.99,
+      "tags": { "new": true, "sustainable": true, "premium": false },
+      "colorVariants": [
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "DarkBlue",
+            "group": "Blue",
+            "value": "#0d47a1"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2141250.59Z4_front",
+            "flat": "https://media.soliver.com/i/soliver/2141250.59Z4_flat",
+            "back": "https://media.soliver.com/i/soliver/2141250.59Z4_back",
+            "outfit": "https://media.soliver.com/i/soliver/2141250.59Z4_outfit"
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Trousers",
+      "detail": "Trousers",
+      "category": "Unterteile",
+      "brand": "s.Oliver BLACK LABEL",
+      "price": 79.99,
+      "tags": { "new": true, "sustainable": false, "premium": true },
+      "colorVariants": [
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "RosePink",
+            "group": "Pink",
+            "value": "#f8bbd0"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2142826.4757_front",
+            "flat": "https://media.soliver.com/i/soliver/2142826.4757_flat",
+            "back": "https://media.soliver.com/i/soliver/2142826.4757_back",
+            "outfit": "https://media.soliver.com/i/soliver/2142826.4757_outfit"
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Jeans Scube",
+      "detail": "Jeans Scube / Relaxed Fit / High Rise / Straight Leg",
+      "category": "Unterteile",
+      "brand": "s.Oliver",
+      "price": 79.99,
+      "tags": { "new": true, "sustainable": false, "premium": false },
+      "colorVariants": [
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "RustBlue",
+            "group": "Blue",
+            "value": "#1565c0"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2145746.53Z4_front",
+            "flat": "https://media.soliver.com/i/soliver/2145746.53Z4_flat",
+            "back": "https://media.soliver.com/i/soliver/2145746.53Z4_back",
+            "outfit": "https://media.soliver.com/i/soliver/2145746.53Z4_outfit"
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Hoodie",
+      "detail": "Hoodie with fleece lining",
+      "category": "Jacken & Mäntel",
+      "brand": "QS by s.Oliver",
+      "price": 79.99,
+      "tags": { "new": true, "sustainable": false, "premium": true },
+      "colorVariants": [
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "Black",
+            "group": "Black",
+            "value": "#000000"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2141622.9999_front",
+            "flat": "https://media.soliver.com/i/soliver/2141622.9999_flat",
+            "back": "https://media.soliver.com/i/soliver/2141622.9999_back",
+            "outfit": "https://media.soliver.com/i/soliver/2141622.9999_outfit"
+          }
+        },
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "NavyBlue",
+            "group": "Blue",
+            "value": "#1a237e"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2141622.5884_front",
+            "flat": "https://media.soliver.com/i/soliver/2141622.5884_flat",
+            "back": "https://media.soliver.com/i/soliver/2141622.5884_back",
+            "outfit": "https://media.soliver.com/i/soliver/2141622.5884_outfit"
+          }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Hoodie",
+      "detail": "Hoodie with fleece lining",
+      "category": "Jacken & Mäntel",
+      "brand": "QS by s.Oliver",
+      "price": 79.99,
+      "tags": { "new": true, "sustainable": false, "premium": true },
+      "colorVariants": [
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "NavyBlue",
+            "group": "Blue",
+            "value": "#1a237e"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2141622.5884_front",
+            "flat": "https://media.soliver.com/i/soliver/2141622.5884_flat",
+            "back": "https://media.soliver.com/i/soliver/2141622.5884_back",
+            "outfit": "https://media.soliver.com/i/soliver/2141622.5884_outfit"
+          }
+        },
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "Black",
+            "group": "Black",
+            "value": "#000000"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2141622.9999_front",
+            "flat": "https://media.soliver.com/i/soliver/2141622.9999_flat",
+            "back": "https://media.soliver.com/i/soliver/2141622.9999_back",
+            "outfit": "https://media.soliver.com/i/soliver/2141622.9999_outfit"
+          }
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Indoor Jacket",
+      "detail": "Indoor Jacket",
+      "category": "Jacken & Mäntel",
+      "brand": "s.Oliver BLACK LABEL",
+      "price": 139.99,
+      "tags": { "new": true, "sustainable": false, "premium": true },
+      "colorVariants": [
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "DarkBlue",
+            "group": "Blue",
+            "value": "#1a237e"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2146198.5955_front",
+            "flat": "https://media.soliver.com/i/soliver/2146198.5955_flat",
+            "back": "https://media.soliver.com/i/soliver/2146198.5955_back",
+            "outfit": "https://media.soliver.com/i/soliver/2146198.5955_outfit"
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Outdoor Jacket",
+      "detail": "Outdoor Jacket",
+      "category": "Jacken & Mäntel",
+      "brand": "s.Oliver",
+      "price": 119.99,
+      "tags": { "new": true, "sustainable": false, "premium": false },
+      "colorVariants": [
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "LightBlue",
+            "group": "Blue",
+            "value": "#448aff"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2140533.5402_front",
+            "flat": "https://media.soliver.com/i/soliver/2140533.5402_flat",
+            "back": "https://media.soliver.com/i/soliver/2140533.5402_back",
+            "outfit": "https://media.soliver.com/i/soliver/2140533.5402_outfit"
+          }
+        },
+        {
+          "wishList": false,
+          "shoppingCart": false,
+          "color": {
+            "variant": "NavyBlue",
+            "group": "Blue",
+            "value": "#1a237e"
+          },
+          "pictures": {
+            "front": "https://media.soliver.com/i/soliver/2140533.5978_front",
+            "flat": "https://media.soliver.com/i/soliver/2140533.5978_flat",
+            "back": "https://media.soliver.com/i/soliver/2140533.5978_back",
+            "outfit": "https://media.soliver.com/i/soliver/2140533.5978_outfit"
+          }
+        }
+      ]
+    }
+  ]
+}
