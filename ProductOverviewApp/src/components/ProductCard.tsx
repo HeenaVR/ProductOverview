@@ -12,7 +12,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { COLORS } from "../constants/colors";
 
 const { width } = Dimensions.get("window");
-const cardWidth = (width - 30) / 2; // Calculating the width for 2 columns with margin
+const cardWidth = (width - 30) / 2; // width for 2 columns with margin
 
 interface ProductCardProps {
   detail: string;
@@ -68,11 +68,21 @@ const ProductCard: React.FC<ProductCardProps> = ({
           <TouchableOpacity
             key={index}
             style={[
-              styles.colorCircle,
-              { backgroundColor: variant.color.value },
+              styles.colorCircleOuter,
+              {
+                borderColor:
+                  variant === activeColor ? COLORS.black : COLORS.lightGray,
+              },
             ]}
             onPress={() => setActiveColor(variant)}
-          />
+          >
+            <View
+              style={[
+                styles.colorCircleInner,
+                { backgroundColor: variant.color.value },
+              ]}
+            />
+          </TouchableOpacity>
         ))}
       </View>
 
@@ -83,8 +93,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
         >
           <Ionicons
             name={isInWishlist ? "heart" : "heart-outline"}
-            size={24}
-            color={isInWishlist ? COLORS.black : COLORS.black}
+            size={18}
+            color={isInWishlist ? COLORS.red : COLORS.red}
           />
         </TouchableOpacity>
 
@@ -93,8 +103,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
           style={[styles.iconButton, styles.shadow]}
         >
           <Ionicons
-            name={isInBag ? "cart" : "cart-outline"}
-            size={24}
+            name={isInBag ? "bag" : "bag-outline"}
+            size={18}
             color={isInBag ? COLORS.black : COLORS.black}
           />
         </TouchableOpacity>
@@ -105,7 +115,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
 const styles = StyleSheet.create({
   cardContainer: {
-    backgroundColor: COLORS.white,
+    backgroundColor: COLORS.appBackgroundColor,
     marginBottom: 10,
     width: cardWidth, // width for 2-column layout
     position: "relative",
@@ -134,28 +144,40 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginVertical: 8,
   },
-  colorCircle: {
+  // Outer color circle with conditional border
+  colorCircleOuter: {
     width: 24,
     height: 24,
     borderRadius: 12,
+    justifyContent: "center",
+    alignItems: "center",
     marginHorizontal: 4,
+    borderWidth: 1,
+  },
+  // Inner color circle for actual color
+  colorCircleInner: {
+    width: 18,
+    height: 18,
+    borderRadius: 9,
   },
   iconContainer: {
     flexDirection: "column",
     position: "absolute",
-    top: 16,
-    right: 16,
+    top: 4,
+    right: 6,
   },
   iconButton: {
     backgroundColor: COLORS.white,
-    padding: 8,
-    borderRadius: 16,
-    marginVertical: 8,
+    padding: 5,
+    borderRadius: 14,
+    marginVertical: 5,
+    width: 28,
+    height: 28,
   },
   shadow: {
     shadowColor: COLORS.black,
     shadowOpacity: 0.3,
-    shadowRadius: 4,
+    shadowRadius: 3,
     shadowOffset: { width: 0, height: 2 },
     elevation: 5,
   },

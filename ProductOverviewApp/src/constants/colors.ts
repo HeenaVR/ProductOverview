@@ -1,8 +1,7 @@
 export const COLORS = {
+  appBackgroundColor: "#fff",
   white: "#fff",
   black: "#000",
-  articleColor1: "#ffffff",
-  articleColor2: "#c5b895",
-  articleColor3: "#001f3f",
-  articleColor4: "#223366",
+  lightGray: "#E2DAD6",
+  red: "#B8001F"
 };
