@@ -1,63 +1,77 @@
-import React, { useEffect, useState } from "react";
-import { FlatList, StyleSheet, View, ActivityIndicator } from "react-native";
+import { useEffect, useState } from "react";
+import {
+  FlatList,
+  StyleSheet,
+  View,
+  ActivityIndicator,
+  Modal,
+} from "react-native";
 import ProductCard, { ProductCardProps } from "../components/ProductCard";
 import { COLORS } from "../constants/colors";
-
-// ProductCardProps by omitting action handlers & state booleans
-type Product = Omit<ProductCardProps, "onUpdateCart" | "onUpdateWishlist">;
+import FilterComponent from "../components/FilterComponent";
+import SearchBar from "../components/SearchBar";
+import { useProductActions } from "../hooks/useProductActions";
+import { fetchProducts } from "../services/api";
+import { useProductFiltering } from "../hooks/useProductFiltering";
 
 const ProductOverviewScreen: React.FC = () => {
-  const [productData, setProductData] = useState<Product[]>([]);
+  const [productData, setProductData] = useState<ProductCardProps[]>([]); // Original data
   const [loading, setLoading] = useState<boolean>(true);
-  const [wishlist, setWishlist] = useState<string[]>([]);
-  const [cart, setCart] = useState<string[]>([]);
+  const [isFilterModalVisible, setIsFilterModalVisible] = useState(false);
+  const [availableColors, setAvailableColors] = useState<string[]>([]); // for dynamic colors
+  const { handleUpdateWishlist, handleUpdateCart } = useProductActions();
 
-  // Fetch data from JSON server
+  // Fetch product data using the service
   useEffect(() => {
-    const fetchProducts = async () => {
+    const loadProducts = async () => {
       try {
-        const response = await fetch("http://localhost:3001/articles");
-        const data = await response.json();
+        const data = await fetchProducts();
         setProductData(data);
-        setLoading(false);
+        extractUniqueColors(data); // Extract unique colors from the fetched data
       } catch (error) {
-        console.error("Error fetching product data:", error);
+        console.log(error);
+      } finally {
         setLoading(false);
       }
     };
 
-    fetchProducts();
+    loadProducts();
   }, []);
 
-  // Helper function to generate unique key for productId and color variant index
-  const generateUniqueKey = (productId: string, colorIndex: number) => {
-    return `${productId}-${colorIndex}`;
+  // Extract unique colors from the product data
+  const extractUniqueColors = (products: ProductCardProps[]) => {
+    const colorSet = new Set<string>();
+
+    products.forEach((product) => {
+      product.colorVariants.forEach((variant) => {
+        colorSet.add(variant.color.value); // Add color to the set
+      });
+    });
+
+    setAvailableColors(Array.from(colorSet)); // Convert the set to an array
   };
 
-  const handleUpdateWishlist = (
-    productId: string,
-    colorIndex: number,
-    inWishlist: boolean
-  ) => {
-    const uniqueKey = generateUniqueKey(productId, colorIndex);
-    if (inWishlist) {
-      setWishlist([...wishlist, uniqueKey]); // Add to wishlist
-    } else {
-      setWishlist(wishlist.filter((key) => key !== uniqueKey)); // Remove from wishlist
-    }
+  // `useProductFiltering` hook for filtering logic
+  const {
+    filteredProducts,
+    searchQuery,
+    selectedPrice,
+    selectedColor,
+    setSearchQuery,
+    setSelectedPrice,
+    setSelectedColor,
+  } = useProductFiltering(productData);
+
+  // Handle applying filters
+  const applyFilters = () => {
+    setIsFilterModalVisible(false); // Close filter modal after applying
   };
 
-  const handleUpdateCart = (
-    productId: string,
-    colorIndex: number,
-    inCart: boolean
-  ) => {
-    const uniqueKey = generateUniqueKey(productId, colorIndex);
-    if (inCart) {
-      setCart([...cart, uniqueKey]); // Add to cart
-    } else {
-      setCart(cart.filter((key) => key !== uniqueKey)); // Remove from cart
-    }
+  // Reset filters
+  const resetFilters = () => {
+    setSelectedColor(null);
+    setSelectedPrice(250); // Reset price to default
+    setSearchQuery(""); // Reset search
   };
 
   if (loading) {
@@ -65,31 +79,81 @@ const ProductOverviewScreen: React.FC = () => {
   }
 
   return (
-    <FlatList
-      data={productData}
-      keyExtractor={(item) => item.id}
-      numColumns={2}
-      renderItem={({ item }) => (
-        <View style={styles.cardContainer}>
-          <ProductCard
-            id={item.id}
-            detail={item.detail}
-            price={item.price}
-            colorVariants={item.colorVariants}
-            onUpdateCart={(colorIndex, inCart) =>
-              handleUpdateCart(item.id, colorIndex, inCart)
-            }
-            onUpdateWishlist={(colorIndex, inWishlist) =>
-              handleUpdateWishlist(item.id, colorIndex, inWishlist)
-            }
-          />
+    <View style={styles.mainContainer}>
+      {/* Search Input */}
+      <SearchBar
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        onFilterPress={() => setIsFilterModalVisible(true)}
+      />
+
+      {/* Filter Modal */}
+      <Modal
+        visible={isFilterModalVisible}
+        transparent={true}
+        animationType="slide"
+        onRequestClose={() => setIsFilterModalVisible(false)}
+      >
+        <View style={styles.modalContainer}>
+          <View style={styles.modalContent}>
+            <FilterComponent
+              availableColors={availableColors}
+              selectedColor={selectedColor}
+              selectedPrice={selectedPrice}
+              onApplyFilters={applyFilters}
+              onResetFilters={resetFilters}
+              onClose={() => setIsFilterModalVisible(false)}
+              onPriceChange={setSelectedPrice}
+              onColorChange={setSelectedColor}
+            />
+          </View>
         </View>
-      )}
-    />
+      </Modal>
+
+      {/* Product List */}
+      <FlatList
+        data={filteredProducts}
+        keyExtractor={(item) => item.id}
+        numColumns={2}
+        renderItem={({ item }) => (
+          <View style={styles.cardContainer}>
+            <ProductCard
+              id={item.id}
+              detail={item.detail}
+              price={item.price}
+              colorVariants={item.colorVariants}
+              onUpdateCart={(colorIndex, inCart) =>
+                handleUpdateCart(item.id, colorIndex, inCart)
+              }
+              onUpdateWishlist={(colorIndex, inWishlist) =>
+                handleUpdateWishlist(item.id, colorIndex, inWishlist)
+              }
+            />
+          </View>
+        )}
+      />
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  mainContainer: {
+    paddingVertical: 20,
+    marginBottom: 30,
+    marginHorizontal: 5,
+  },
+  modalContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: COLORS.appBackgroundColor,
+  },
+  modalContent: {
+    width: "95%",
+    padding: 20,
+    backgroundColor: COLORS.appBackgroundColor,
+    borderRadius: 10,
+  },
   cardContainer: {
     flex: 1,
     flexDirection: "row",
