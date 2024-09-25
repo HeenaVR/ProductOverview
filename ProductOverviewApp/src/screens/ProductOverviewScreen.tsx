@@ -138,7 +138,8 @@ const ProductOverviewScreen: React.FC = () => {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    paddingVertical: 20,
+    paddingTop: 10,
+    paddingBottom: 30,
     marginBottom: 30,
     marginHorizontal: 5,
   },
