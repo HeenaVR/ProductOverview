@@ -1,6 +1,8 @@
-# ProductOverview E-commerce Application
-
-A React Native application built to present an attractive and informative product overview, allowing users to search for and filter products efficiently. The app aims to reduce return rates by enabling customers to make informed purchasing decisions through detailed product displays and filtering options.
+# ProductOverview E-commerce Application 📱
+## Key Highlights
+- 🚀 Product Listing with Efficient Filtering and Local State Management for Wishlist & Add to Cart
+- 🧪 Comprehensive Test Cases for Key Features
+- ✅ Linting Enabled for Code Consistency and Best Practices
 
 ## Demo:
 https://github.com/user-attachments/assets/e1d2f3c8-8b61-4788-8b0d-2fd4ed68e7ee
