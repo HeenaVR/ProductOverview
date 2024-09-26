@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1727340533545" clover="3.2.0">
-  <project timestamp="1727340533546" name="All files">
-    <metrics statements="20" coveredstatements="19" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="6" elements="29" coveredelements="27" complexity="0" loc="20" ncloc="20" packages="3" files="3" classes="3"/>
+<coverage generated="1727365816681" clover="3.2.0">
+  <project timestamp="1727365816681" name="All files">
+    <metrics statements="84" coveredstatements="77" conditionals="18" coveredconditionals="16" methods="34" coveredmethods="29" elements="136" coveredelements="122" complexity="0" loc="84" ncloc="84" packages="5" files="8" classes="8"/>
     <package name="components">
-      <metrics statements="18" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="6"/>
+      <metrics statements="37" coveredstatements="30" conditionals="8" coveredconditionals="6" methods="15" coveredmethods="10"/>
       <file name="FilterComponent.tsx" path="/Users/heenaberiya/Documents/Work/React_Native/Practicles/ProductOverview/ProductOverviewApp/src/components/FilterComponent.tsx">
         <metrics statements="18" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="6"/>
         <line num="24" count="1" type="stmt"/>
@@ -25,19 +25,104 @@
         <line num="104" count="3" type="stmt"/>
         <line num="117" count="1" type="stmt"/>
       </file>
+      <file name="ProductCard.tsx" path="/Users/heenaberiya/Documents/Work/React_Native/Practicles/ProductOverview/ProductOverviewApp/src/components/ProductCard.tsx">
+        <metrics statements="16" coveredstatements="10" conditionals="6" coveredconditionals="4" methods="7" coveredmethods="3"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="53" count="4" type="stmt"/>
+        <line num="70" count="2" type="stmt"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="119" count="1" type="stmt"/>
+      </file>
+      <file name="SearchBar.tsx" path="/Users/heenaberiya/Documents/Work/React_Native/Practicles/ProductOverview/ProductOverviewApp/src/components/SearchBar.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+      </file>
     </package>
     <package name="constants">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="colors.ts" path="/Users/heenaberiya/Documents/Work/React_Native/Practicles/ProductOverview/ProductOverviewApp/src/constants/colors.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="hooks">
+      <metrics statements="37" coveredstatements="37" conditionals="8" coveredconditionals="8" methods="18" coveredmethods="18"/>
+      <file name="useProductActions.ts" path="/Users/heenaberiya/Documents/Work/React_Native/Practicles/ProductOverview/ProductOverviewApp/src/hooks/useProductActions.ts">
+        <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="8" coveredmethods="8"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="5" count="12" type="stmt"/>
+        <line num="7" count="12" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="11" count="12" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="24" count="12" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="37" count="12" type="stmt"/>
+      </file>
+      <file name="useProductFiltering.ts" path="/Users/heenaberiya/Documents/Work/React_Native/Practicles/ProductOverview/ProductOverviewApp/src/hooks/useProductFiltering.ts">
+        <metrics statements="21" coveredstatements="21" conditionals="4" coveredconditionals="4" methods="10" coveredmethods="10"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="24" type="stmt"/>
+        <line num="6" count="24" type="stmt"/>
+        <line num="7" count="24" type="stmt"/>
+        <line num="8" count="24" type="stmt"/>
+        <line num="11" count="24" type="stmt"/>
+        <line num="12" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="20" type="stmt"/>
+        <line num="18" count="24" type="stmt"/>
+        <line num="19" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="28" count="24" type="stmt"/>
+        <line num="29" count="39" type="stmt"/>
+        <line num="33" count="24" type="stmt"/>
+        <line num="34" count="12" type="stmt"/>
+        <line num="38" count="24" type="stmt"/>
+        <line num="39" count="12" type="stmt"/>
+        <line num="42" count="24" type="stmt"/>
+      </file>
+    </package>
+    <package name="services">
+      <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="api.ts" path="/Users/heenaberiya/Documents/Work/React_Native/Practicles/ProductOverview/ProductOverviewApp/src/services/api.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
       </file>
     </package>
     <package name="styles">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="buttonStyles.ts" path="/Users/heenaberiya/Documents/Work/React_Native/Practicles/ProductOverview/ProductOverviewApp/src/styles/buttonStyles.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
       </file>
     </package>
   </project>

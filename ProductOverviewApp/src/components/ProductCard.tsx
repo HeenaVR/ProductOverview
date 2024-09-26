@@ -77,6 +77,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
               },
             ]}
             onPress={() => setActiveColorIndex(index)}
+            testID="color-circle"
           >
             <View
               style={[

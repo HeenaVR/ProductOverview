@@ -34,5 +34,11 @@ export const useProductActions = () => {
     );
   };
 
-  return { wishlist, cart, handleUpdateWishlist, handleUpdateCart };
+  return {
+    wishlist,
+    cart,
+    handleUpdateWishlist,
+    handleUpdateCart,
+    generateUniqueKey,
+  };
 };

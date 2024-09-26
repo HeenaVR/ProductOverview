@@ -5,6 +5,7 @@ import {
   View,
   ActivityIndicator,
   Modal,
+  Text,
 } from "react-native";
 import ProductCard, { ProductCardProps } from "../components/ProductCard";
 import { COLORS } from "../constants/colors";
@@ -19,6 +20,7 @@ const ProductOverviewScreen: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [isFilterModalVisible, setIsFilterModalVisible] = useState(false);
   const [availableColors, setAvailableColors] = useState<string[]>([]); // for dynamic colors
+
   const { handleUpdateWishlist, handleUpdateCart } = useProductActions();
 
   // Fetch product data using the service
@@ -44,11 +46,11 @@ const ProductOverviewScreen: React.FC = () => {
 
     products.forEach((product) => {
       product.colorVariants.forEach((variant) => {
-        colorSet.add(variant.color.value); // Add color to the set
+        colorSet.add(variant.color.value);
       });
     });
 
-    setAvailableColors(Array.from(colorSet)); // Convert the set to an array
+    setAvailableColors(Array.from(colorSet));
   };
 
   // `useProductFiltering` hook for filtering logic
@@ -64,7 +66,7 @@ const ProductOverviewScreen: React.FC = () => {
 
   // Handle applying filters
   const applyFilters = () => {
-    setIsFilterModalVisible(false); // Close filter modal after applying
+    setIsFilterModalVisible(false);
   };
 
   // Reset filters
@@ -131,6 +133,11 @@ const ProductOverviewScreen: React.FC = () => {
             />
           </View>
         )}
+        ListEmptyComponent={
+          <View style={styles.emptyContainer}>
+            <Text style={styles.emptyText}>No Products 🙁</Text>
+          </View>
+        }
       />
     </View>
   );
@@ -161,6 +168,16 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     justifyContent: "space-evenly",
     padding: 5,
+  },
+  emptyContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
+  },
+  emptyText: {
+    fontSize: 16,
+    color: COLORS.black,
   },
 });
 
