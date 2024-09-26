@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   View,
   Text,
@@ -10,20 +10,12 @@ import {
 import { Image as ExpoImage } from "expo-image";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { COLORS } from "../constants/colors";
+import { Product } from "../types/productTypes";
 
 const { width } = Dimensions.get("window");
 const cardWidth = (width - 30) / 2; // width for 2 columns with margin
 
-export interface ProductCardProps {
-  id: string;
-  detail: string;
-  price: number;
-  colorVariants: Array<{
-    shoppingCart: boolean;
-    wishList: boolean;
-    color: { value: string };
-    pictures: { front: string; back: string; flat: string; outfit: string };
-  }>;
+export interface ProductCardProps extends Product {
   onUpdateCart: (colorIndex: number, inCart: boolean) => void;
   onUpdateWishlist: (colorIndex: number, inWishlist: boolean) => void;
 }
@@ -38,22 +30,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
   const [activeColorIndex, setActiveColorIndex] = useState(0);
   const activeColor = colorVariants[activeColorIndex];
 
-  // wishlist and cart toggle by updating the respective field directly in colorVariants
-  const toggleField = (field: "wishList" | "shoppingCart") => {
+  const toggleField = (
+    field: "wishList" | "shoppingCart",
+    callback: (index: number, status: boolean) => void
+  ) => {
     const updatedVariants = [...colorVariants];
     updatedVariants[activeColorIndex][field] =
-      !updatedVariants[activeColorIndex][field]; // Toggle status
-    if (field === "wishList") {
-      onUpdateWishlist(
-        activeColorIndex,
-        updatedVariants[activeColorIndex].wishList
-      );
-    } else {
-      onUpdateCart(
-        activeColorIndex,
-        updatedVariants[activeColorIndex].shoppingCart
-      );
-    }
+      !updatedVariants[activeColorIndex][field];
+    callback(activeColorIndex, updatedVariants[activeColorIndex][field]);
   };
 
   return (
@@ -92,7 +76,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
                   index === activeColorIndex ? COLORS.black : COLORS.lightGray,
               },
             ]}
-            onPress={() => setActiveColorIndex(index)} // Switch color variant
+            onPress={() => setActiveColorIndex(index)}
+            testID="color-circle"
           >
             <View
               style={[
@@ -106,7 +91,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
       <View style={styles.iconContainer}>
         <TouchableOpacity
-          onPress={() => toggleField("wishList")} // toggle wishlist
+          onPress={() => toggleField("wishList", onUpdateWishlist)}
           style={[styles.iconButton, styles.shadow]}
         >
           <Ionicons
@@ -117,7 +102,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={() => toggleField("shoppingCart")} // toggle cart
+          onPress={() => toggleField("shoppingCart", onUpdateCart)}
           style={[styles.iconButton, styles.shadow]}
         >
           <Ionicons
@@ -134,7 +119,6 @@ const ProductCard: React.FC<ProductCardProps> = ({
 const styles = StyleSheet.create({
   cardContainer: {
     backgroundColor: COLORS.appBackgroundColor,
-    marginBottom: 10,
     width: cardWidth, // width for 2-column layout
     position: "relative",
   },
@@ -151,7 +135,7 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 16,
-    fontWeight: "300",
+    fontWeight: "400",
     marginVertical: 8,
   },
   price: {
