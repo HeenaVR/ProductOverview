@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1727340533545" clover="3.2.0">
+  <project timestamp="1727340533546" name="All files">
+    <metrics statements="20" coveredstatements="19" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="6" elements="29" coveredelements="27" complexity="0" loc="20" ncloc="20" packages="3" files="3" classes="3"/>
+    <package name="components">
+      <metrics statements="18" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="6"/>
+      <file name="FilterComponent.tsx" path="/Users/heenaberiya/Documents/Work/React_Native/Practicles/ProductOverview/ProductOverviewApp/src/components/FilterComponent.tsx">
+        <metrics statements="18" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="6"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="34" count="12" type="stmt"/>
+        <line num="35" count="12" type="stmt"/>
+        <line num="37" count="12" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="42" count="12" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="47" count="12" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="54" count="12" type="stmt"/>
+        <line num="76" count="36" type="stmt"/>
+        <line num="77" count="36" type="stmt"/>
+        <line num="84" count="2" type="stmt"/>
+        <line num="103" count="3" type="stmt"/>
+        <line num="104" count="3" type="stmt"/>
+        <line num="117" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="constants">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="colors.ts" path="/Users/heenaberiya/Documents/Work/React_Native/Practicles/ProductOverview/ProductOverviewApp/src/constants/colors.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="styles">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="buttonStyles.ts" path="/Users/heenaberiya/Documents/Work/React_Native/Practicles/ProductOverview/ProductOverviewApp/src/styles/buttonStyles.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

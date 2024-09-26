@@ -66,6 +66,7 @@ const FilterComponent: React.FC<FilterComponentProps> = ({
         minimumTrackTintColor={COLORS.black}
         maximumTrackTintColor={COLORS.lightGray}
         thumbTintColor={COLORS.black}
+        testID="price-slider"
       />
 
       <Text>Color:</Text>
@@ -81,6 +82,7 @@ const FilterComponent: React.FC<FilterComponentProps> = ({
                   { borderColor: isSelected ? COLORS.black : COLORS.lightGray },
                 ]}
                 onPress={() => handleColorSelect(color)}
+                testID={`color-circle-${color}`}
               >
                 <View
                   style={[styles.colorCircleInner, { backgroundColor: color }]}
